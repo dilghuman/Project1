@@ -21,8 +21,19 @@ public class GroupOfCards {
     private ArrayList<Card> cards;
     private int size;//the size of the grouping
 
-    public GroupOfCards(int size) {
+   public GroupOfCards(int size) {
         this.size = size;
+        this.cards = new ArrayList<>(size);
+        initializeDeck();
+    }
+
+    private void initializeDeck() {
+        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+        for (String suit : suits) {
+            for (int rank = 1; rank <= 13; rank++) {
+                cards.add(new PlayingCard(rank, suit));
+            }
+        }
     }
 
     /**
