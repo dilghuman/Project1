@@ -28,7 +28,7 @@ public class GroupOfCards {
     }
 
     private void initializeDeck() {
-        String[] suits = {"", "Diamonds", "Clubs", "Spades"};
+        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         for (String suit : suits) {
             for (int rank = 1; rank <= 13; rank++) {
                 cards.add(new PlayingCard(rank, suit));
